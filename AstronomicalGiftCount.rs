@@ -1,5 +1,5 @@
 use std::io;
-use num_traits::pow;
+use num_traits::pow; // imported from crates.io
 
 fn count_gift(age: u32) -> u32 {
     let mut gifts: u32 = 0;
