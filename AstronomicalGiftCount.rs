@@ -2,15 +2,15 @@ use std::io;
 use num_traits::pow; // imported from crates.io
 
 fn count_gift(age: u32) -> u32 {
-    let mut gifts: u32 = 0;
+    
+    let gifts: u32;
 
-    if age > 0 {
-        if age % 2 == 0 {
-            gifts = pow(age, 3);
-        } else {
-            gifts = pow(age, 2);
-        }
-    }
+    match age % 2 { 
+        0 => gifts = pow(age, 3),
+        1 => gifts = pow(age, 2),
+        _ => unreachable!()
+    };
+
     gifts
 }
 
