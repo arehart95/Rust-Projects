@@ -15,12 +15,12 @@ fn count_gift(age: u32) -> u32 {
 }
 
 fn main() {
+    
     println!("Enter your age: ");
     let mut buffer = String::new();
     io::stdin().read_line(&mut buffer).expect("Couldn't get input.");
 
     let age: u32 = buffer.trim().parse().unwrap();
     println!("You are {} years old, and therefore eligible for {} gifts!", age, count_gift(age));
-
 
 }
